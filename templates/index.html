@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main-container">
+    <section class="container navbar">
+        <div class="navigation">
+            <h1 class="logo">Weather App</h1>
+            <form method="POST" class="searchbar">
+                {% csrf_token %}
+                <input type="text" class="input-box" autocomplete="off" placeholder="Enter Location" name="city">
+                <button type="submit" hidden>Search</button>
+            </form>
+        </div>
+    </section>
+    <section class="container daily">
+        <div class="info general">
+            <h2 class="cityname">{{city}},{{country}}</h2>
+            <p class="date">{{DD}} {{MM}} </p>
+            <p class="date">{{hh}}:{{mm}}</p>
+            <div class="container small">
+                <img src="http://openweathermap.org/img/w/{{icon_current}}.png" id="weatherimage">
+                <div>
+                    <p class="temp">{{temp}}<sup><sup>o</sup>C</sup></p>
+                    <p class="desc">{{condition}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info other">
+            <div>
+                <p>{{high}}<sup><sup>o</sup>C</sup></p>
+                <p class="condition-name">High</p>
+                <img src="static/images/high-temperature.png" class="condition-icon">
+            </div>
+            <div>
+                <p>{{wind}}<span> m/s</span></p>
+                <p class="condition-name">Wind</p>
+                <img src="static/images/wind.png" class="condition-icon">
+            </div>
+            <div>
+                <p>{{sunrise}}</p>
+                <p class="condition-name">Sunrise</p>
+                <img src="static/images/sunrise.png" class="condition-icon">
+            </div>
+
+            <div>
+                <p>{{low}}<sup><sup>o</sup>C</sup></p>
+                <p class="condition-name">Low</p>
+                <img src="static/images/low-temperature.png" class="condition-icon">
+            </div>
+            <div>
+                <p>{{humidity}}%</p>
+                <p class="condition-name">Humidity</p>
+                <img src="static/images/humidity.png" class="condition-icon">
+            </div>
+            <div>
+                <p>{{sunset}}</p>
+                <p class="condition-name">Sunset</p>
+                <img src="static/images/sunset.png" class="condition-icon">
+            </div>
+        </div>
+    </section>
+    <!-- <div class="main-div-heading">
+        <h6>Todays Weather</h6>
+    </div> -->
+    <section class="container hourly">
+        {% for key,value in forcast_time.items %}
+        <div class="card">
+            <div>
+                {{value.0}}
+            </div>
+            <div><img src="http://openweathermap.org/img/w/{{value.1}}.png" style="background-color: whitesmoke;"></div>
+            <div>{{value.3}}<sup><sup>o</sup>C</sup></div>
+            <div>{{value.2}}</div>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock content %}

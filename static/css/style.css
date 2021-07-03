@@ -1,0 +1,161 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2.5rem;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+}
+h2{
+    font-size: 2rem;
+}
+img{
+    width:120px;
+    /* border: 2px solid red; */
+}
+.logo{
+    width: 25%;
+}
+form{
+    /* border: 2px solid red; */
+    width: 75%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+form input{
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 0.5em;
+    border-radius: 25px;
+    width: 20ch;
+    min-width: 10ch;
+}
+form input:focus{
+    border: 0px;
+    border-radius: 25px;
+}
+sup{
+    background-color: #91A3B0;
+}
+.main-container{
+    background-color: sandybrown;
+    margin: 0 ;
+    border: 0.1px solid black;
+}
+.container{
+    display: flex;
+    margin: 1em auto;
+    /* border: 2px solid green; */
+    width: 90%;
+    max-width: 1300px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+.navbar{
+    background-color: #6D7B8D;
+}
+.daily{
+    background-color: #91A3B0;
+}
+.navigation{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    /* background-color: #91A3B0; */
+    margin: 0.5em auto;
+}
+nav div{
+    padding: 1em;
+}
+
+.small{
+    margin: 1em 0;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.info{
+    width: 47%;
+}
+.general{
+    border-right: 2px solid black;
+}
+
+.other div{
+    text-align: center;
+    /* border: 2px solid green; */
+}
+.other div img{
+    width: 30px;
+}
+.other{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.other div{
+    width: 30%;
+    margin-top: 1em;
+    font-size: 1.3em;
+}
+.temp{
+    font-size: 4rem;
+}
+.hourly{
+    overflow-x: scroll;
+    justify-content: space-between;
+    /* border: 2px solid pink; */
+    flex-wrap: nowrap;
+    background-color: #6D7B8D;
+}
+.hourly::-webkit-scrollbar {
+    display: none;
+  }
+.hourly div{
+    margin: 0.5em 1em;
+    text-align: center;
+}
+.card{
+    border-radius: 5px;
+    background-color: #91A3B0;
+}
+.condition-name{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width:768px) {
+    .navigation{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo{
+        text-align: center;
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    .daily{
+        flex-direction: column;
+    }
+    .general{
+        border-right: 0;
+        border-bottom: 2px solid black;
+    }
+    
+}
