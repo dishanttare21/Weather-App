@@ -5,7 +5,7 @@ import pytz
 
 # Create your views here.
 def index(request):
-    city = 'london'
+    city = 'London'
     
     if request.method == "POST":
         city = request.POST["city"]

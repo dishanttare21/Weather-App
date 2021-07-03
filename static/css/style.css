@@ -2,7 +2,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #FFF;
 }
 body{
     margin: 0;
@@ -38,16 +38,17 @@ form input{
     border-radius: 25px;
     width: 20ch;
     min-width: 10ch;
+    color: #000;
 }
 form input:focus{
     border: 0px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 sup{
-    background-color: #91A3B0;
+    background-color: #486581;
 }
 .main-container{
-    background: sandybrown;
+    background: #000;
     margin: 0 ;
     border: 0.1px solid black;
 }
@@ -63,19 +64,16 @@ sup{
     border-radius: 10px;
 }
 .navbar{
-    background-color: #6D7B8D;
+    background-color: #627D98;
 }
 .daily{
-    /* background-color: #91A3B0; */
-    background-image: url("../images/b2.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: #486581;
 }
 .navigation{
     display: flex;
     width: 100%;
     justify-content: left;
-    /* background-color: #91A3B0; */
+    /* background-color: #486581; */
     margin: 0.5em auto;
 }
 nav div{
@@ -121,7 +119,7 @@ nav div{
     justify-content: space-between;
     /* border: 2px solid pink; */
     flex-wrap: nowrap;
-    background-color: #6D7B8D;
+    background-color: #486581;
 }
 .hourly::-webkit-scrollbar {
     display: none;
@@ -130,9 +128,13 @@ nav div{
     margin: 0.5em 1em;
     text-align: center;
 }
+.hourly img{
+    width: 80px;
+    border-radius: 50px;
+}
 .card{
     border-radius: 5px;
-    background-color: #91A3B0;
+    background-color: #486581;
 }
 .condition-name{
     font-family: 'Courier New', Courier, monospace;
@@ -149,6 +151,7 @@ nav div{
     }
     form{
         width: 100%;
+        margin: 1em 0 0 0;
     }
     .info{
         width: 100%;
